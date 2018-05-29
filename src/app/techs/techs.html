@@ -1,8 +1,17 @@
 <div class="techs-container">
-  <h2 class="techs-h2">
-    Cooked with all these awesome technologies:
-  </h2>
-  <div class="techs">
-    <fountain-tech ng-repeat="tech in $ctrl.techs" tech="tech"></fountain-tech>
+    <!-- <fountain-tech ng-repeat="tech in $ctrl.techs" tech="tech"></fountain-tech> -->
+  <div class="container">
+    <div class="movie-container" ng-repeat="movie in $ctrl.movieData" style="color: white">
+      <div class="movie-image">
+        <img src="{{movie.PromoImages[0]}}" alt="">
+      </div>
+      <div class="movie-text">
+        <div class="">
+          <h1 class="fwb fz12">{{movie.Title}}</h1>
+          <p class="fz12">{{movie.ProgrammeEndDate | date:'MM/dd/yyyy hh:mm'}}</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
